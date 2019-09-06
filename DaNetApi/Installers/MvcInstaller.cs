@@ -13,7 +13,7 @@ namespace DaNetApi.Installers
 
             services.AddSwaggerGen(x =>
             {
-                x.SwaggerDoc("v1", new Info { Title = "DaNetApi API", Version = "v1" });
+                x.SwaggerDoc("v1", new Info { Title = "DA Net-API", Description = ".NET Core Web API", Version = "v1" });
             });
         }
     }
