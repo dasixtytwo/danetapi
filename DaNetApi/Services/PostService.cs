@@ -22,14 +22,26 @@ namespace DaNetApi.Services
             }
         }
 
+        public List<Post> GetPosts()
+        {
+            return _posts;
+        }
+
         public Post GetPostById(Guid postId)
         {
             return _posts.SingleOrDefault(x => x.Id == postId);
         }
 
-        public List<Post> GetPosts()
+        public bool UpdatePost(Post postToUpdate)
         {
-            return _posts;
+            var exists = GetPostById(postToUpdate.Id) != null;
+
+            if (!exists)
+                return false;
+
+            var index = _posts.FindIndex(x => x.Id == postToUpdate.Id);
+            _posts[index] = postToUpdate;
+            return true;
         }
     }
 }
