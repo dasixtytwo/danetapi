@@ -17,7 +17,7 @@ namespace DaNetApi.Installers
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<DataContext>();
 
-            services.AddSingleton<IPostService, postService>();
+            services.AddScoped<IPostService, postService>();
         }
     }
 }
