@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using DaNetApi.Contracts.V1;
-using DaNetApi.Domain;
+using DaNetApi.Models;
 using DaNetApi.Contracts.V1.Requests;
 using DaNetApi.Contracts.V1.Responses;
 using DaNetApi.Services;

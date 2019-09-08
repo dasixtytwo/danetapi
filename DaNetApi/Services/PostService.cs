@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DaNetApi.Data;
-using DaNetApi.Domain;
+using DaNetApi.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DaNetApi.Services
