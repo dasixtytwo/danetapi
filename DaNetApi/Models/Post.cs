@@ -1,7 +1,13 @@
-﻿namespace DaNetApi.Contracts.V1.Requests
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace DaNetApi.Models
 {
-    public class CreatePostRequest
+    public class Post
     {
+        [Key]
+        public Guid Id { get; set; }
+
         public string Title { get; set; }
 
         public string SubTitle { get; set; }
