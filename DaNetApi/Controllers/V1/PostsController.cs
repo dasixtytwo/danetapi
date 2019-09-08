@@ -34,7 +34,9 @@ namespace DaNetApi.Controllers.V1
                 Title = request.Title,
                 SubTitle = request.SubTitle,
                 Slug = request.Slug,
-                BodyText = request.BodyText
+                BodyText = request.BodyText,
+                PostImage = request.PostImage,
+                PostDate = DateTime.Now
             };
 
             var updated = await _postService.UpdatePostAsync(post);
