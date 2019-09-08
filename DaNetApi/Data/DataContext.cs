@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using DaNetApi.Domain;
+using DaNetApi.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,9 +9,7 @@ namespace DaNetApi.Data
     public class DataContext : IdentityDbContext
     {
         public DataContext(DbContextOptions<DataContext> options)
-            : base(options)
-        {
-        }
+            : base(options) {}
 
         public DbSet<Post> Posts { get; set; }
 

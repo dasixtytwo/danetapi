@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DaNetApi.Contracts.V1.Requests
+﻿namespace DaNetApi.Contracts.V1.Requests
 {
     public class CreatePostRequest
     {
