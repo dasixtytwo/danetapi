@@ -16,5 +16,12 @@
             public const string Get = Base + "/posts/{postId}";
             public const string Create = Base + "/posts";
         }
+
+        public static class Authaccess
+        {
+            public const string Login = Base + "/auth/login";
+
+            public const string Register = Base + "/auth/resgister";
+        }
     }
 }

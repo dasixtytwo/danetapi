@@ -41,6 +41,11 @@ namespace DaNetApi
                 app.UseHsts();
             }
 
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseAuthentication();
+
             var swaggerOptions = new SwaggerOptions();
             Configuration.GetSection(nameof(SwaggerOptions)).Bind(swaggerOptions);
 
@@ -51,11 +56,8 @@ namespace DaNetApi
 
             app.UseSwaggerUI(option =>
             {
-                option.SwaggerEndpoint(swaggerOptions.UIEndpoint, swaggerOptions.Description);
+                option.SwaggerEndpoint(swaggerOptions.UiEndpoint, swaggerOptions.Description);
             });
-
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
 
             app.UseMvc();
         }
