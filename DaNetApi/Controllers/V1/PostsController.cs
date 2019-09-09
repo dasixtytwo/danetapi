@@ -7,9 +7,13 @@ using DaNetApi.Contracts.V1.Requests;
 using DaNetApi.Contracts.V1.Responses;
 using DaNetApi.Services;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DaNetApi.Controllers.V1
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+
     public class PostsController : Controller
     {
         private readonly IPostService _postService;
